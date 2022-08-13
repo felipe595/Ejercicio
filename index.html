@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <style>
+        .body{
+            background-color: rgb(133, 198, 244);
+            text-align: center; 
+        }
+        .body_style{
+            color: white;
+        }
+        .body_img{
+            width: 100%;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+
+<body class="body">
+    <h1 class= "body_title">¿Quieres hacerlo mañana?😏</h1>
+    <img
+    src="https://tsmnoticias.com/wp-content/uploads/2016/09/Ejercicios-para-realizar-en-pareja-1024x645.jpg"
+    alt="" class="body__img"/>
+    <button id="yes">❤️SIII❤️</button>
+    <button id="no">NOOO😢</button>
+
+
+<script>
+    const vutonSi = document.getElementById('yes'); 
+    const vutonNo = document.getElementById('no'); 
+
+    const hacerlo = () => {
+        alert('WOW! Sabia que dirias que si. TE AMO🥰');
+        alert('Mañana se hace de nuevo😉 '); 
+        location.href='https://www.youtube.com/watch?v=09Cj0wQM8UY&t=44s'; 
+
+    }
+
+    const evitar = () => {
+        vutonNo.style.position= 'absolute'; 
+        vutonNo.style.top=(Math.random()* window.innerHeight + 'px'); 
+        vutonNo.style.left=(Math.random()* window.innerHeight + 'px'); 
+
+    }
+    vutonSi.addEventListener('click', hacerlo); 
+    vutonNo.addEventListener('mouseover', evitar); 
+</script>
+</body>
+</html>
